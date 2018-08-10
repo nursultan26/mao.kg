@@ -1,66 +1,41 @@
-        <footer>
-            <div class="container">
-                <div class="row_flex">
-                    <div class="col-md-4 col-sm-3 block_logo">
-                        <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
-                        <p class="sub">© 2011–2018 MAO.KG | Все права защищены</p>
-                    </div>
-                    <div class="col-md-5 col-sm-6 block_menufooter">
-                        <ul class="list_menu row_flex">
-                            <li class="col-md-6"><a href="#">О нас</a></li>
-                            <li class="col-md-6"><a href="#">Помощь</a></li>
-                            <li class="col-md-6"><a href="#">Доставка</a></li>
-                            <li class="col-md-6"><a href="#">Политика безопасности</a></li>
-                            <li class="col-md-6"><a href="#">Карта сайта</a></li>
-                            <li class="col-md-6"><a href="#">Пользовательское соглашение</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3 col-sm-3 block_networks">
-                        <ul class="list_networks">
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                        </ul>
-                        <div class="box_developer"><span class="title">Разработка и дизайн</span><a href="#" class="logo_dev"><img src="img/png/logo_RL.png" alt=""></a></div>
-                    </div>
-                </div>
+<footer>
+    <div class="container">
+        <div class="row_flex">
+            <div class="col-md-4 col-sm-3 block_logo">
+                <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+                <p class="sub">© 2011–2018 MAO.KG | Все права защищены</p>
             </div>
-        </footer>
-            <!--end Footer-->
+            <div class="col-md-5 col-sm-6 block_menufooter">
+                <ul class="list_menu row_flex">
+                    <li class="col-md-6"><a href="#">О нас</a></li>
+                    <li class="col-md-6"><a href="#">Помощь</a></li>
+                    <li class="col-md-6"><a href="#">Доставка</a></li>
+                    <li class="col-md-6"><a href="#">Политика безопасности</a></li>
+                    <li class="col-md-6"><a href="#">Карта сайта</a></li>
+                    <li class="col-md-6"><a href="#">Пользовательское соглашение</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-3 block_networks">
+                <ul class="list_networks">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                </ul>
+                <div class="box_developer"><span class="title">Разработка и дизайн</span><a href="#" class="logo_dev"><img src="img/png/logo_RL.png" alt=""></a></div>
+            </div>
         </div>
-        <!--Wrapper end-->
+    </div>
+</footer>
+    <!--end Footer-->
+</div>
+<!--Wrapper end-->
 
-        <!--[if IE 9]>
-            <script>
-                window.location = "oldbrowser/index.html";
-            </script>
-        <![endif]-->
+<!--[if IE 9]>
+    <script>
+        window.location = "oldbrowser/index.html";
+    </script>
+<![endif]-->
 
-        <script type="text/javascript" src="<%= path %>js/libs.min.js"></script>
-        <script type="text/javascript" src="<%= path %>js/commond.js"></script>
-        <script>
-            $(document).ready(function(){
-                $('.list-gallery').each(function() {
-                    $(this).magnificPopup({
-                        delegate: '.image-link',
-                        type: 'image',
-                        gallery: {
-                            enabled:true
-                        },
-                        zoom: {
-                            enabled: true,
-
-                            duration: 600,
-                            easing: 'ease-in-out',
-                            opener: function(openerElement) {
-                                return openerElement.is('img') ? openerElement : openerElement.find('img');
-                            }
-                        }
-                    });
-                });
-            });
-        </script>
-
-    </body>
-</html>
+<script type="text/javascript" src="<%= path %>js/libs.min.js"></script>
+<script type="text/javascript" src="<%= path %>js/commond.js"></script>

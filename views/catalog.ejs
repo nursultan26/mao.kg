@@ -1,447 +1,208 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta property="og:image" content="path/to/image.jpg">
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        <meta name="author" content="">
-        <title>Главная</title>
-        <link rel="stylesheet" type="text/css" href="css/libs.min.css">
-        <link rel="stylesheet" type="text/css" href="css/main.css">
-        <link rel="stylesheet" type="text/css" href="css/media.css">
-        <!--Fonts-->
-        <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-
-    </head>
-
-    <body>
-        <!-- Loader -->
-        <div class="load-inner">
-            <div class="showbox">
-                <div class="loader">
-                    <svg class="circular" viewBox="25 25 50 50">
-                        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10"/>
-                    </svg>
-                    <span class="logo"><img src="img/png/loader.png" alt="logo"></span>
+<%- include('./header.ejs', {path: '../'}); %>
+        <!--end Header-->
+        <!--start section.breadCrumps-->
+        <section class="breadCrumps">
+            <div class="container">
+                <div class="row_flex">
+                    <ul class="list_breadCrumps">
+                        <li><a href="#">Главная</a><i>\</i></li>
+                        <li><a href="#">Каталог</a><i>\</i></li>
+                        <li><a href="#">Одежда</a><i>\</i></li>
+                        <li><span>Для мужчин</span></li>
+                    </ul>
                 </div>
             </div>
-        </div>
-        <!-- Loader end -->
-        <!--start modal-->
-        <div class="modal fade" id="modalOrder" tabindex="5" role="dialog"  aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 20 20">
-                                <path fill="#ffffff" d="M10.707 10.5l5.646-5.646c0.195-0.195 0.195-0.512 0-0.707s-0.512-0.195-0.707 0l-5.646 5.646-5.646-5.646c-0.195-0.195-0.512-0.195-0.707 0s-0.195 0.512 0 0.707l5.646 5.646-5.646 5.646c-0.195 0.195-0.195 0.512 0 0.707 0.098 0.098 0.226 0.146 0.354 0.146s0.256-0.049 0.354-0.146l5.646-5.646 5.646 5.646c0.098 0.098 0.226 0.146 0.354 0.146s0.256-0.049 0.354-0.146c0.195-0.195 0.195-0.512 0-0.707l-5.646-5.646z"></path>
-                            </svg>
-                        </button>
-                        <div class="textCenter">
-                            <h4 class="title">Обратная связь</h4>
-                        </div>
-                        <div class="block-form">
-                            <form action="">
-                                <div class="group">
-                                    <input type="text" name="name" placeholder="Ваше имя">
-                                </div>
-                                <div class="group">
-                                    <input type="tel" name="name" placeholder="Телефон">
-                                </div>
-                                <div class="textCenter">
-                                    <div class="goup-btn">
-                                        <button type="submit" class="btn_main">Отправить</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+        </section>
+        <!--end section.breadCrumps-->
+        <!--start section.banner-->
+        <section class="banner">
+            <div class="container">
+                <div class="box_banner"><a href="#" class="img_wrapper"><img src="img/jpg/banner.jpg" alt=""></a></div>
             </div>
-        </div>
-        <!--end modal-->
-
-        <!--Wrapper-->
-        <div class="wrapper">
-            <!--start Header-->
-            <header id="header" class="header">
-                <div class="top_head">
-                    <div class="container">
-                        <div class="row_flex">
-                            <div class="col-md-6 box_net_works">
-                                <ul class="list__net_works">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6 box_callBack">
-                                <p class="phone"><i class="fas fa-phone"></i>+996 555 904 115</p>
-                                <a href="#" class="btn_callBack" data-toggle="modal" data-target="#modalOrder">Обратный Звонок</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row_flex">
-                        <div class="col-md-2 block_logo"><a href="#" class="logo"><img src="img/logo.png" alt="Mao.kg"></a></div>
-                        <nav class="col-md-8 header-menu navbar">
-                            <div class="navbar-header">
-                                <div class="block_logo_mobi"><a href="#" class="logo"><img src="img/logo.png" alt="Mao.kg"></a></div>
-                            </div>
-                            <div class="collapse navbar-collapse">
-                                <ul class="nav navbar-nav">
-                                    <li class="dropdown category_btn">
-                                        <a href="#" data-toggle="dropdown">Категории товаров<i class="fas fa-angle-down"></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="dropdown-submenu">
-                                                <a href="#" tabindex="-1">Аксессуары</a>
-                                                <a href="#" class="arrow"><i class="fas fa-angle-left"></i></a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="#" tabindex="-1">Для этого</a></li>
-                                                    <li><a href="#" tabindex="-1">Для того</a></li>
-                                                    <li><a href="#" tabindex="-1">Для сего</a></li>
-                                                    <li><a href="#" tabindex="-1">Для него</a></li>
-                                                    <li><a href="#" tabindex="-1">Для нее</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown-submenu">
-                                                <a href="#" tabindex="-1">Одежда</a>
-                                                <a href="#" class="arrow"><i class="fas fa-angle-left"></i></a>
-                                                <ul class="dropdown-menu">
-                                                    <li class="dropdown-submenu">
-                                                        <a href="#" tabindex="-1">Мужская</a>
-                                                        <a href="#" class="arrow"><i class="fas fa-angle-left"></i></a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="#" tabindex="-1">Кофты</a></li>
-                                                            <li><a href="#" tabindex="-1">Футболки</a></li>
-                                                            <li><a href="#" tabindex="-1">Куртки</a></li>
-                                                            <li><a href="#" tabindex="-1">Брюки</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown-submenu">
-                                                        <a href="#" tabindex="-1">Женская</a>
-                                                        <a href="#" class="arrow"><i class="fas fa-angle-left"></i></a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="#" tabindex="-1">Кофты</a></li>
-                                                            <li><a href="#" tabindex="-1">Футболки</a></li>
-                                                            <li><a href="#" tabindex="-1">Куртки</a></li>
-                                                            <li><a href="#" tabindex="-1">Брюки</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown-submenu">
-                                                        <a href="#" tabindex="-1">Для девочек</a>
-                                                        <a href="#" class="arrow"><i class="fas fa-angle-left"></i></a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="#" tabindex="-1">Кофты</a></li>
-                                                            <li><a href="#" tabindex="-1">Футболки</a></li>
-                                                            <li><a href="#" tabindex="-1">Куртки</a></li>
-                                                            <li><a href="#" tabindex="-1">Брюки</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown-submenu">
-                                                        <a href="#" tabindex="-1">Для мальчиков</a>
-                                                        <a href="#" class="arrow"><i class="fas fa-angle-left"></i></a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="#" tabindex="-1">Кофты</a></li>
-                                                            <li><a href="#" tabindex="-1">Футболки</a></li>
-                                                            <li><a href="#" tabindex="-1">Куртки</a></li>
-                                                            <li><a href="#" tabindex="-1">Брюки</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Обувь</a></li>
-                                            <li><a href="#">Спортивные товары</a></li>
-                                            <li><a href="#">Электроника</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Доставка</a></li>
-                                    <li><a href="#">Оплата</a></li>
-                                    <li><a href="#">Акции и скидки</a></li>
-                                    <li><a href="#">Контакты</a></li>
-                                </ul>
-                            </div><!--.nav-collapse -->
-                        </nav>
-                        <div class="col-md-2 block__icon_user">
-                            <div class="dropdown box__btn_search">
-                                <a href="#" class="btn_user" data-toggle="dropdown">
-                                    <i class="fas fa-search open"></i>
-                                    <i class="closed">&times;</i>
-                                </a>
-                                <div class="dropdown-menu">
-                                    <form action="">
-                                        <div class="group">
-                                            <input type="text" name="textfield" placeholder="Найти...">
-                                            <button type="submit" class="btn_search"><i class="fas fa-search"></i></button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="box__btn_basket">
-                                <a href="#" class="btn_user"><i class="fas fa-shopping-basket"></i>
-                                    <span class="number">3</span>
-                                </a>
-                            </div>
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="icon-bar line1"></span>
-                                <span class="icon-bar line2"></span>
-                                <span class="icon-bar line3"></span>
-                            </button>
-                        </div>
-                        <!--nav.header-menu end-->
-                    </div>
-                </div>
-            </header>
-            <!--end Header-->
-            <!--start section.breadCrumps-->
-            <section class="breadCrumps">
-                <div class="container">
-                    <div class="row_flex">
-                        <ul class="list_breadCrumps">
-                            <li><a href="#">Главная</a><i>\</i></li>
-                            <li><a href="#">Каталог</a><i>\</i></li>
-                            <li><a href="#">Одежда</a><i>\</i></li>
-                            <li><span>Для мужчин</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <!--end section.breadCrumps-->
-            <!--start section.banner-->
-            <section class="banner">
-                <div class="container">
-                    <div class="box_banner"><a href="#" class="img_wrapper"><img src="img/jpg/banner.jpg" alt=""></a></div>
-                </div>
-            </section>
-            <!--end section.banner-->
-            <!--start section.main-->
-            <section class="main">
-                <div class="container">
-                   <div class="row_flex">
-                       <div class="col-md-3 col-sm-12 col-xs-12 site_bar">
-                           <div class="wrapper_site_bar">
-                               <div class="box_caption_sitebar">
-                                   <p class="caption">Одежда для мужчин</p>
-                               </div>
-                               <ul class="list__under_category">
-                                   <li class="active"><a href="#">Футболки</a></li>
-                                   <li><a href="#">Куртки</a></li>
-                                   <li><a href="#">Кофты</a></li>
-                                   <li><a href="#">Желетки</a></li>
-                                   <li><a href="#">Брюки</a></li>
-                                   <li><a href="#">Шорты</a></li>
-                                   <li><a href="#">Трусики</a></li>
-                                   <li><a href="#">Носки</a></li>
-                               </ul>
-                               <div class="block__filter">
-                                   <div class="block__filter">
-                                       <div class="btnAccordion" data-toggle="collapse" data-target="#listAccordion2">
-                                           <p class="name">Цена</p>
-                                           <i class="fa fa-angle-down icon-arrow" aria-hidden="true"></i>
-                                       </div>
-                                       <div id="listAccordion2" class="collapse in">
-                                           <div class="box-price">
-                                               <div class="box-range">
-                                                   <div class="range-slider">
-                                                       <input value="90" min="90" max="535" step="1" type="range">
-                                                       <input value="535" min="90" max="535" step="1" type="range">
-                                                       <span class="rangeValues"></span>
-                                                   </div>
-                                               </div>
-                                           </div>
-                                       </div>
-                                   </div>
-                               </div>
+        </section>
+        <!--end section.banner-->
+        <!--start section.main-->
+        <section class="main">
+            <div class="container">
+               <div class="row_flex">
+                   <div class="col-md-3 col-sm-12 col-xs-12 site_bar">
+                       <div class="wrapper_site_bar">
+                           <div class="box_caption_sitebar">
+                               <p class="caption">Одежда для мужчин</p>
                            </div>
-                       </div>
-                       <div class="col-md-9 col-sm-12 col-xs-12 main_content">
-                           <div class="block__caption_main">
-                               <h2 class="caption_main_catalog">Футболки</h2>
-                               <div class="box_filter_products flex_box">
-                                   <span class="number_product">256  товаров</span>
-                                   <div class="group-btn">
-                                       <button class="btn-position swap">
-                                           <ul class="icon">
-                                               <li></li>
-                                               <li></li>
-                                               <li></li>
-                                           </ul>
-                                           <ul class="icon">
-                                               <li></li>
-                                               <li></li>
-                                               <li></li>
-                                           </ul>
-                                           <ul class="icon">
-                                               <li></li>
-                                               <li></li>
-                                               <li></li>
-                                           </ul>
-                                       </button>
-                                   </div>
-                               </div>
-                           </div>
-                           <ul class="list__products columnStyle row_flex">
-                               <li class="col-md-4 col-sm-4 col-xs-12 item">
-                                   <div class="wrapper_product">
-                                       <a href="#" class="img_wrapper"><img src="img/products/prod1.jpg" alt=""></a>
-                                       <div class="box_description">
-                                           <p class="name"><a href="#">Коврик для мыши</a></p>
-                                           <span class="descript">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio facilis, quod quae.</span>
-                                           <div class="bottom_box">
-                                               <div class="box_price"><span class="old_price">780 сом</span><span class="price">650сом</span></div>
-                                               <div class="box_basket">
-                                                   <a href="#" class="btn_basket">В корзину<i class="fas fa-cart-arrow-down"></i></a>
-                                               </div>
-                                           </div>
-                                       </div>
-                                   </div>
-                               </li>
-                               <li class="col-md-4 col-sm-4 col-xs-12 item">
-                                   <div class="wrapper_product">
-                                       <a href="#" class="img_wrapper"><img src="img/products/prod2.jpg" alt=""></a>
-                                       <div class="box_description">
-                                           <p class="name"><a href="#">Рюкзак горный</a></p>
-                                           <span class="descript">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio facilis, quod quae.</span>
-                                           <div class="bottom_box">
-                                               <div class="box_price"><span class="price">650сом</span></div>
-                                               <div class="box_basket">
-                                                   <a href="#" class="btn_basket">В корзину<i class="fas fa-cart-arrow-down"></i></a>
-                                               </div>
-                                           </div>
-                                       </div>
-                                   </div>
-                               </li>
-                               <li class="col-md-4 col-sm-4 col-xs-12 item">
-                                   <div class="wrapper_product">
-                                       <a href="#" class="img_wrapper"><img src="img/products/prod3.jpg" alt=""></a>
-                                       <div class="box_description">
-                                           <p class="name"><a href="#">Квадрокоптер "НЕ ЛЕТАЮ"</a></p>
-                                           <span class="descript">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio facilis, quod quae.</span>
-                                           <div class="bottom_box">
-                                               <div class="box_price"><span class="old_price">7080 сом</span><span class="price">6550сом</span></div>
-                                               <div class="box_basket">
-                                                   <a href="#" class="btn_basket">В корзину<i class="fas fa-cart-arrow-down"></i></a>
-                                               </div>
-                                           </div>
-                                       </div>
-                                   </div>
-                               </li>
-                               <li class="col-md-4 col-sm-4 col-xs-12 item">
-                                   <div class="wrapper_product">
-                                       <a href="#" class="img_wrapper"><img src="img/products/prod4.jpg" alt=""></a>
-                                       <div class="box_description">
-                                           <p class="name"><a href="#">Велосипед детский</a></p>
-                                           <span class="descript">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio facilis, quod quae.</span>
-                                           <div class="bottom_box">
-                                               <div class="box_price"><span class="old_price">7080 сом</span><span class="price">6550сом</span></div>
-                                               <div class="box_basket">
-                                                   <a href="#" class="btn_basket">В корзину<i class="fas fa-cart-arrow-down"></i></a>
-                                               </div>
-                                           </div>
-                                       </div>
-                                   </div>
-                               </li>
-                               <li class="col-md-4 col-sm-4 col-xs-12 item">
-                                   <div class="wrapper_product">
-                                       <a href="#" class="img_wrapper"><img src="img/products/prod1.jpg" alt=""></a>
-                                       <div class="box_description">
-                                           <p class="name"><a href="#">Коврик для мыши</a></p>
-                                           <span class="descript">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio facilis, quod quae.</span>
-                                           <div class="bottom_box">
-                                               <div class="box_price"><span class="old_price">780 сом</span><span class="price">650сом</span></div>
-                                               <div class="box_basket">
-                                                   <a href="#" class="btn_basket">В корзину<i class="fas fa-cart-arrow-down"></i></a>
-                                               </div>
-                                           </div>
-                                       </div>
-                                   </div>
-                               </li>
-                               <li class="col-md-4 col-sm-4 col-xs-12 item">
-                                   <div class="wrapper_product">
-                                       <a href="#" class="img_wrapper"><img src="img/products/prod2.jpg" alt=""></a>
-                                       <div class="box_description">
-                                           <p class="name"><a href="#">Рюкзак горный</a></p>
-                                           <span class="descript">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio facilis, quod quae.</span>
-                                           <div class="bottom_box">
-                                               <div class="box_price"><span class="price">650сом</span></div>
-                                               <div class="box_basket">
-                                                   <a href="#" class="btn_basket">В корзину<i class="fas fa-cart-arrow-down"></i></a>
-                                               </div>
-                                           </div>
-                                       </div>
-                                   </div>
-                               </li>
+                           <ul class="list__under_category">
+                               <li class="active"><a href="#">Футболки</a></li>
+                               <li><a href="#">Куртки</a></li>
+                               <li><a href="#">Кофты</a></li>
+                               <li><a href="#">Желетки</a></li>
+                               <li><a href="#">Брюки</a></li>
+                               <li><a href="#">Шорты</a></li>
+                               <li><a href="#">Трусики</a></li>
+                               <li><a href="#">Носки</a></li>
                            </ul>
-                           <div class="textCenter">
-                               <ul class="paginator">
-                                   <li><a href="#"><i class="fas fa-arrow-left"></i></a></li>
-                                   <li class="active"><a href="#">1</a></li>
-                                   <li><a href="#">2</a></li>
-                                   <li><a href="#">3</a></li>
-                                   <li><a href="#">4</a></li>
-                                   <li><a href="#"><i class="fas fa-arrow-right"></i></a></li>
-                               </ul>
+                           <div class="block__filter">
+                               <div class="block__filter">
+                                   <div class="btnAccordion" data-toggle="collapse" data-target="#listAccordion2">
+                                       <p class="name">Цена</p>
+                                       <i class="fa fa-angle-down icon-arrow" aria-hidden="true"></i>
+                                   </div>
+                                   <div id="listAccordion2" class="collapse in">
+                                       <div class="box-price">
+                                           <div class="box-range">
+                                               <div class="range-slider">
+                                                   <input value="90" min="90" max="535" step="1" type="range">
+                                                   <input value="535" min="90" max="535" step="1" type="range">
+                                                   <span class="rangeValues"></span>
+                                               </div>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
                            </div>
                        </div>
                    </div>
-                </div>
-            </section>
-            <!--end section.main-->
-            <!--start section.banner-->
-            <section class="banner">
-                <div class="container">
-                    <div class="box_banner"><a href="#" class="img_wrapper"><img src="img/jpg/banner.jpg" alt=""></a></div>
-                </div>
-            </section>
-            <!--end section.banner-->
-            <!--start Footer-->
-            <footer>
-                <div class="container">
-                    <div class="row_flex">
-                        <div class="col-md-4 col-sm-3 block_logo">
-                            <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
-                            <p class="sub">© 2011–2018 MAO.KG | Все права защищены</p>
-                        </div>
-                        <div class="col-md-5 col-sm-6 block_menufooter">
-                            <ul class="list_menu row_flex">
-                                <li class="col-md-6"><a href="#">О нас</a></li>
-                                <li class="col-md-6"><a href="#">Помощь</a></li>
-                                <li class="col-md-6"><a href="#">Доставка</a></li>
-                                <li class="col-md-6"><a href="#">Политика безопасности</a></li>
-                                <li class="col-md-6"><a href="#">Карта сайта</a></li>
-                                <li class="col-md-6"><a href="#">Пользовательское соглашение</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3 col-sm-3 block_networks">
-                            <ul class="list_networks">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                            </ul>
-                            <div class="box_developer"><span class="title">Разработка и дизайн</span><a href="#" class="logo_dev"><img src="img/png/logo_RL.png" alt=""></a></div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-            <!--end Footer-->
-        </div>
-        <!--Wrapper end-->
-
-        <!--[if IE 9]>
-        <script>
-        window.location = "oldbrowser/index.html";
-        </script>
-        <![endif]-->
-
-        <script type="text/javascript" src="js/libs.min.js"></script>
-        <script type="text/javascript" src="js/commond.js"></script>
+                   <div class="col-md-9 col-sm-12 col-xs-12 main_content">
+                       <div class="block__caption_main">
+                           <h2 class="caption_main_catalog">Футболки</h2>
+                           <div class="box_filter_products flex_box">
+                               <span class="number_product">256  товаров</span>
+                               <div class="group-btn">
+                                   <button class="btn-position swap">
+                                       <ul class="icon">
+                                           <li></li>
+                                           <li></li>
+                                           <li></li>
+                                       </ul>
+                                       <ul class="icon">
+                                           <li></li>
+                                           <li></li>
+                                           <li></li>
+                                       </ul>
+                                       <ul class="icon">
+                                           <li></li>
+                                           <li></li>
+                                           <li></li>
+                                       </ul>
+                                   </button>
+                               </div>
+                           </div>
+                       </div>
+                       <ul class="list__products columnStyle row_flex">
+                           <li class="col-md-4 col-sm-4 col-xs-12 item">
+                               <div class="wrapper_product">
+                                   <a href="#" class="img_wrapper"><img src="img/products/prod1.jpg" alt=""></a>
+                                   <div class="box_description">
+                                       <p class="name"><a href="#">Коврик для мыши</a></p>
+                                       <span class="descript">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio facilis, quod quae.</span>
+                                       <div class="bottom_box">
+                                           <div class="box_price"><span class="old_price">780 сом</span><span class="price">650сом</span></div>
+                                           <div class="box_basket">
+                                               <a href="#" class="btn_basket">В корзину<i class="fas fa-cart-arrow-down"></i></a>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </li>
+                           <li class="col-md-4 col-sm-4 col-xs-12 item">
+                               <div class="wrapper_product">
+                                   <a href="#" class="img_wrapper"><img src="img/products/prod2.jpg" alt=""></a>
+                                   <div class="box_description">
+                                       <p class="name"><a href="#">Рюкзак горный</a></p>
+                                       <span class="descript">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio facilis, quod quae.</span>
+                                       <div class="bottom_box">
+                                           <div class="box_price"><span class="price">650сом</span></div>
+                                           <div class="box_basket">
+                                               <a href="#" class="btn_basket">В корзину<i class="fas fa-cart-arrow-down"></i></a>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </li>
+                           <li class="col-md-4 col-sm-4 col-xs-12 item">
+                               <div class="wrapper_product">
+                                   <a href="#" class="img_wrapper"><img src="img/products/prod3.jpg" alt=""></a>
+                                   <div class="box_description">
+                                       <p class="name"><a href="#">Квадрокоптер "НЕ ЛЕТАЮ"</a></p>
+                                       <span class="descript">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio facilis, quod quae.</span>
+                                       <div class="bottom_box">
+                                           <div class="box_price"><span class="old_price">7080 сом</span><span class="price">6550сом</span></div>
+                                           <div class="box_basket">
+                                               <a href="#" class="btn_basket">В корзину<i class="fas fa-cart-arrow-down"></i></a>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </li>
+                           <li class="col-md-4 col-sm-4 col-xs-12 item">
+                               <div class="wrapper_product">
+                                   <a href="#" class="img_wrapper"><img src="img/products/prod4.jpg" alt=""></a>
+                                   <div class="box_description">
+                                       <p class="name"><a href="#">Велосипед детский</a></p>
+                                       <span class="descript">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio facilis, quod quae.</span>
+                                       <div class="bottom_box">
+                                           <div class="box_price"><span class="old_price">7080 сом</span><span class="price">6550сом</span></div>
+                                           <div class="box_basket">
+                                               <a href="#" class="btn_basket">В корзину<i class="fas fa-cart-arrow-down"></i></a>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </li>
+                           <li class="col-md-4 col-sm-4 col-xs-12 item">
+                               <div class="wrapper_product">
+                                   <a href="#" class="img_wrapper"><img src="img/products/prod1.jpg" alt=""></a>
+                                   <div class="box_description">
+                                       <p class="name"><a href="#">Коврик для мыши</a></p>
+                                       <span class="descript">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio facilis, quod quae.</span>
+                                       <div class="bottom_box">
+                                           <div class="box_price"><span class="old_price">780 сом</span><span class="price">650сом</span></div>
+                                           <div class="box_basket">
+                                               <a href="#" class="btn_basket">В корзину<i class="fas fa-cart-arrow-down"></i></a>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </li>
+                           <li class="col-md-4 col-sm-4 col-xs-12 item">
+                               <div class="wrapper_product">
+                                   <a href="#" class="img_wrapper"><img src="img/products/prod2.jpg" alt=""></a>
+                                   <div class="box_description">
+                                       <p class="name"><a href="#">Рюкзак горный</a></p>
+                                       <span class="descript">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio facilis, quod quae.</span>
+                                       <div class="bottom_box">
+                                           <div class="box_price"><span class="price">650сом</span></div>
+                                           <div class="box_basket">
+                                               <a href="#" class="btn_basket">В корзину<i class="fas fa-cart-arrow-down"></i></a>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </li>
+                       </ul>
+                       <div class="textCenter">
+                           <ul class="paginator">
+                               <li><a href="#"><i class="fas fa-arrow-left"></i></a></li>
+                               <li class="active"><a href="#">1</a></li>
+                               <li><a href="#">2</a></li>
+                               <li><a href="#">3</a></li>
+                               <li><a href="#">4</a></li>
+                               <li><a href="#"><i class="fas fa-arrow-right"></i></a></li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+            </div>
+        </section>
+        <!--end section.main-->
+        <!--start section.banner-->
+        <section class="banner">
+            <div class="container">
+                <div class="box_banner"><a href="#" class="img_wrapper"><img src="img/jpg/banner.jpg" alt=""></a></div>
+            </div>
+        </section>
+        <!--end section.banner-->
+        <!--start Footer-->
+        <%- include('./footer.ejs', {path: '../'}); %>
         <script>
             $(document).ready(function(){
                 $('.list-gallery').each(function() {

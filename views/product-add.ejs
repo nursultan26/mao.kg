@@ -1,0 +1,32 @@
+
+<section class="advantages">
+    <div class="container">
+        <div class="row_flex">
+            <div class="col-md-3 col-sm-6 col-xs-12 item_advantages">
+                <form action="/product/add" method="GET">
+                    <div class="group">
+                        <input type="text" name="title" placeholder="Наименование товара">
+                    </div>
+                    <div class="group">
+                        <input type="text" name="articul" placeholder="Артикул">
+                    </div>
+                    <div class="group">
+                        <input type="text" name="madeIn" placeholder="Производство">
+                    </div>
+                    <div class="group">
+                        <input type="text" name="size" placeholder="Размер">
+                    </div>
+                    <div class="group">
+                        <input type="file" name="img" accept="image/*">
+                    </div>
+                    <div class="textCenter">
+                        <div class="goup-btn">
+                            <button type="submit" class="btn_main">Отправить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>    
+    </div>
+</section>
+<%- include('./footer.ejs', {path: '../'}); %>

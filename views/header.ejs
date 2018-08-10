@@ -26,7 +26,7 @@
                     <svg class="circular" viewBox="25 25 50 50">
                         <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10"/>
                     </svg>
-                    <span class="logo"><img src="img/png/loader.png" alt="logo"></span>
+                    <span class="logo"><img src="<%= path %>img/png/loader.png" alt="logo"></span>
                 </div>
             </div>
         </div>
@@ -45,7 +45,7 @@
                             <h4 class="title">Обратная связь</h4>
                         </div>
                         <div class="block-form">
-                            <form action="">
+                            <form action="/callback">
                                 <div class="group">
                                     <input type="text" name="name" placeholder="Ваше имя">
                                 </div>
@@ -74,10 +74,10 @@
                        <div class="row_flex">
                            <div class="col-md-6 box_net_works">
                                <ul class="list__net_works">
-                                   <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                   <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                   <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                   <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                   <li><a href="http://facebook.com"><i class="fab fa-facebook-f"></i></a></li>
+                                   <li><a href="http://instagram.com"><i class="fab fa-instagram"></i></a></li>
+                                   <li><a href="http://twitter.com"><i class="fab fa-twitter"></i></a></li>
+                                   <li><a href="http://plus.google.com"><i class="fab fa-google-plus-g"></i></a></li>
                                </ul>
                            </div>
                            <div class="col-md-6 box_callBack">
@@ -89,10 +89,10 @@
                </div>
                 <div class="container">
                     <div class="row_flex">
-                        <div class="col-md-2 block_logo"><a href="#" class="logo"><img src="img/logo.png" alt="Mao.kg"></a></div>
+                        <div class="col-md-2 block_logo"><a href="/" class="logo"><img src="<%= path %>img/logo.png" alt="Mao.kg"></a></div>
                         <nav class="col-md-8 header-menu navbar">
                             <div class="navbar-header">
-                                <div class="block_logo_mobi"><a href="#" class="logo"><img src="img/logo.png" alt="Mao.kg"></a></div>
+                                <div class="block_logo_mobi"><a href="/" class="logo"><img src="<%= path %>img/logo.png" alt="Mao.kg"></a></div>
                             </div>
                             <div class="collapse navbar-collapse">
                                 <ul class="nav navbar-nav">
@@ -104,10 +104,6 @@
                                                 <a href="#" class="arrow"><i class="fas fa-angle-left"></i></a>
                                                 <ul class="dropdown-menu">
                                                     <li><a href="#" tabindex="-1">Для этого</a></li>
-                                                    <li><a href="#" tabindex="-1">Для того</a></li>
-                                                    <li><a href="#" tabindex="-1">Для сего</a></li>
-                                                    <li><a href="#" tabindex="-1">Для него</a></li>
-                                                    <li><a href="#" tabindex="-1">Для нее</a></li>
                                                 </ul>
                                             </li>
                                             <li class="dropdown-submenu">
@@ -124,36 +120,6 @@
                                                             <li><a href="#" tabindex="-1">Брюки</a></li>
                                                         </ul>
                                                     </li>
-                                                    <li class="dropdown-submenu">
-                                                        <a href="#" tabindex="-1">Женская</a>
-                                                        <a href="#" class="arrow"><i class="fas fa-angle-left"></i></a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="#" tabindex="-1">Кофты</a></li>
-                                                            <li><a href="#" tabindex="-1">Футболки</a></li>
-                                                            <li><a href="#" tabindex="-1">Куртки</a></li>
-                                                            <li><a href="#" tabindex="-1">Брюки</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown-submenu">
-                                                        <a href="#" tabindex="-1">Для девочек</a>
-                                                        <a href="#" class="arrow"><i class="fas fa-angle-left"></i></a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="#" tabindex="-1">Кофты</a></li>
-                                                            <li><a href="#" tabindex="-1">Футболки</a></li>
-                                                            <li><a href="#" tabindex="-1">Куртки</a></li>
-                                                            <li><a href="#" tabindex="-1">Брюки</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown-submenu">
-                                                        <a href="#" tabindex="-1">Для мальчиков</a>
-                                                        <a href="#" class="arrow"><i class="fas fa-angle-left"></i></a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="#" tabindex="-1">Кофты</a></li>
-                                                            <li><a href="#" tabindex="-1">Футболки</a></li>
-                                                            <li><a href="#" tabindex="-1">Куртки</a></li>
-                                                            <li><a href="#" tabindex="-1">Брюки</a></li>
-                                                        </ul>
-                                                    </li>
                                                 </ul>
                                             </li>
                                             <li><a href="#">Обувь</a></li>
@@ -161,10 +127,10 @@
                                             <li><a href="#">Электроника</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">Доставка</a></li>
-                                    <li><a href="#">Оплата</a></li>
+                                    <li><a href="/delivery">Доставка</a></li>
+                                    <li><a href="/pay">Оплата</a></li>
                                     <li><a href="#">Акции и скидки</a></li>
-                                    <li><a href="#">Контакты</a></li>
+                                    <li><a href="/contact">Контакты</a></li>
                                 </ul>
                             </div><!--.nav-collapse -->
                         </nav>
@@ -184,7 +150,7 @@
                                 </div>
                             </div>
                             <div class="box__btn_basket">
-                                <a href="#" class="btn_user"><i class="fas fa-shopping-basket"></i>
+                                <a href="/basket" class="btn_user"><i class="fas fa-shopping-basket"></i>
                                     <span class="number">3</span>
                                 </a>
                             </div>

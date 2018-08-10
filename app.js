@@ -17,10 +17,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+var db = require('./database/index')
+
 /* Configure routes */
 var routes = glob.sync('./routes/*.js');
 routes.forEach(function(route) {
-  require(route)(app);
+  require(route)(app, db);
 })
 
 // catch 404 and forward to error handler
