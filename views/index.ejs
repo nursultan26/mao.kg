@@ -51,65 +51,29 @@
             <div class="container">
                 <div class="block__caption_main">
                     <h2 class="caption_main">Новинки</h2>
-                    <span class="number_product">356  товаров</span>
+                    <span class="number_product"><%= product.length %> товаров</span>
                 </div>
                 <ul class="list__products row_flex">
+                    <%
+                        for (var i = 0; i < product.length; i++) {
+                    %>
                     <li class="col-md-3 col-sm-4 col-xs-12 item">
                         <div class="wrapper_product">
-                            <a href="#" class="img_wrapper"><img src="img/products/prod1.jpg" alt=""></a>
+                            <a href="#" class="img_wrapper"><img src="./img/<%= product[i].img %>" alt="" value="<%= product[i].img %>"></a>
                             <div class="box_description">
-                                <p class="name"><a href="#">daw</a></p>
+                                <p class="name"><a href="#"><%= product[i].title %></a></p>
                                 <div class="bottom_box">
-                                    <div class="box_price"><span class="old_price">780 сом</span><span class="price">650сом</span></div>
+                                    <div class="box_price"><% if(product.oldPrice =! null) { %><span class="old_price"><%= product[i].oldPrice %></span><% } %><span class="price"><%= product[i].price %></span></div>
                                     <div class="box_basket">
-                                        <a href="#" class="btn_basket">В корзину<i class="fas fa-cart-arrow-down"></i></a>
+                                        <a href="/basket?product=<%= product[i].id %>" class="btn_basket">В корзину<i class="fas fa-cart-arrow-down"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </li>
-                    <li class="col-md-3 col-sm-4 col-xs-12 item">
-                        <div class="wrapper_product">
-                            <a href="/product/card" class="img_wrapper"><img src="img/products/prod2.jpg" alt=""></a>
-                            <div class="box_description">
-                                <p class="name"><a href="#">Рюкзак горный</a></p>
-                                <div class="bottom_box">
-                                    <div class="box_price"><span class="price">650сом</span></div>
-                                    <div class="box_basket">
-                                        <a href="#" class="btn_basket">В корзину<i class="fas fa-cart-arrow-down"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-md-3 col-sm-4 col-xs-12 item">
-                        <div class="wrapper_product">
-                            <a href="#" class="img_wrapper"><img src="img/products/prod3.jpg" alt=""></a>
-                            <div class="box_description">
-                                <p class="name"><a href="#">Квадрокоптер "НЕ ЛЕТАЮ"</a></p>
-                                <div class="bottom_box">
-                                    <div class="box_price"><span class="old_price">7080 сом</span><span class="price">6550сом</span></div>
-                                    <div class="box_basket">
-                                        <a href="#" class="btn_basket">В корзину<i class="fas fa-cart-arrow-down"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-md-3 col-sm-4 col-xs-12 item">
-                        <div class="wrapper_product">
-                            <a href="#" class="img_wrapper"><img src="img/products/prod4.jpg" alt=""></a>
-                            <div class="box_description">
-                                <p class="name"><a href="#">Велосипед детский</a></p>
-                                <div class="bottom_box">
-                                    <div class="box_price"><span class="old_price">7080 сом</span><span class="price">6550сом</span></div>
-                                    <div class="box_basket">
-                                        <a href="#" class="btn_basket">В корзину<i class="fas fa-cart-arrow-down"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+                    <%
+                        }
+                    %>
                 </ul>
                 <div class="textCenter"><a href="/product/all-new" class="btn_main">Все товары</a></div>
             </div>
@@ -127,65 +91,29 @@
             <div class="container">
                 <div class="block__caption_main">
                     <h2 class="caption_main">В тренде</h2>
-                    <span class="number_product">256  товаров</span>
+                    <span class="number_product"><%= product.length %>  товаров</span>
                 </div>
                 <ul class="list__products row_flex">
+                    <%
+                        for (var i = 0; i < product.length; i++) {
+                    %>
                     <li class="col-md-3 col-sm-4 col-xs-12 item">
                         <div class="wrapper_product">
-                            <a href="#" class="img_wrapper"><img src="img/products/prod1.jpg" alt=""></a>
+                            <a href="#" class="img_wrapper"><img src="./img/<%= product[i].img %>" alt=""></a>
                             <div class="box_description">
-                                <p class="name"><a href="#">Коврик для мыши</a></p>
+                                <p class="name"><a href="#"><%= product[i].title %></a></p>
                                 <div class="bottom_box">
-                                    <div class="box_price"><span class="old_price">780 сом</span><span class="price">650сом</span></div>
+                                    <div class="box_price"><% if(product.oldPrice =! null) { %><span class="old_price"><%= product[i].oldPrice %></span><% } %><span class="price"><%= product[i].price %></span></div>
                                     <div class="box_basket">
-                                        <a href="#" class="btn_basket">В корзину<i class="fas fa-cart-arrow-down"></i></a>
+                                        <a href="/basket?product=<%= product[i].id %>" class="btn_basket">В корзину<i class="fas fa-cart-arrow-down"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </li>
-                    <li class="col-md-3 col-sm-4 col-xs-12 item">
-                        <div class="wrapper_product">
-                            <a href="#" class="img_wrapper"><img src="img/products/prod2.jpg" alt=""></a>
-                            <div class="box_description">
-                                <p class="name"><a href="#">Рюкзак горный</a></p>
-                                <div class="bottom_box">
-                                    <div class="box_price"><span class="price">650сом</span></div>
-                                    <div class="box_basket">
-                                        <a href="#" class="btn_basket">В корзину<i class="fas fa-cart-arrow-down"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-md-3 col-sm-4 col-xs-12 item">
-                        <div class="wrapper_product">
-                            <a href="#" class="img_wrapper"><img src="img/products/prod3.jpg" alt=""></a>
-                            <div class="box_description">
-                                <p class="name"><a href="#">Квадрокоптер "НЕ ЛЕТАЮ"</a></p>
-                                <div class="bottom_box">
-                                    <div class="box_price"><span class="old_price">7080 сом</span><span class="price">6550сом</span></div>
-                                    <div class="box_basket">
-                                        <a href="#" class="btn_basket">В корзину<i class="fas fa-cart-arrow-down"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-md-3 col-sm-4 col-xs-12 item">
-                        <div class="wrapper_product">
-                            <a href="#" class="img_wrapper"><img src="img/products/prod4.jpg" alt=""></a>
-                            <div class="box_description">
-                                <p class="name"><a href="#">Велосипед детский</a></p>
-                                <div class="bottom_box">
-                                    <div class="box_price"><span class="old_price">7080 сом</span><span class="price">6550сом</span></div>
-                                    <div class="box_basket">
-                                        <a href="#" class="btn_basket">В корзину<i class="fas fa-cart-arrow-down"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+                    <%
+                        }
+                    %>
                 </ul>
                 <div class="textCenter"><a href="#" class="btn_main">Все товары</a></div>
             </div>

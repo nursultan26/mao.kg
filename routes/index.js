@@ -5,13 +5,10 @@ var router = express.Router();
 module.exports = function(app, db) {
 	
 	router.get('/', function(req, res, next) {
-		db.Product.findAll()
+		db.Prod_garment.findAll()
 		.then(product => {		
-			console.log(product)
 			res.render('index', {product});
 		})
-
-		
 	});
 
 
@@ -23,9 +20,7 @@ module.exports = function(app, db) {
 		res.render('page');
 	});
 
-	router.get('/product/card', function(req, res, next) {
-		res.render('card', {path: '../../'});
-	});
+
 
 	app.use('/', router)
 };

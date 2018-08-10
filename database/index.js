@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize')
-const productModel = require('./models/product')
+const prod_garmentsModel = require('./models/prod_garment')
 const config = require('../config')
 
 const sequelize = new Sequelize(config.database, config.user, config.dbPassword, {
@@ -13,7 +13,7 @@ const sequelize = new Sequelize(config.database, config.user, config.dbPassword,
   }
 })
 
-const Product = productModel(sequelize, Sequelize)
+const Prod_garment = prod_garmentsModel(sequelize, Sequelize)
 
 
 sequelize.sync({ force: false })
@@ -22,5 +22,5 @@ sequelize.sync({ force: false })
   })
 
 module.exports = {
-  Product
+  Prod_garment
 }
