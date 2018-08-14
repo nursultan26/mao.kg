@@ -21,6 +21,7 @@ var db = require('./database/index')
 
 /* Configure routes */
 var routes = glob.sync('./routes/*.js');
+
 routes.forEach(function(route) {
   require(route)(app, db);
 })

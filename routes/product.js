@@ -30,10 +30,11 @@ module.exports = function(app, db) {
 	});
 
 	router.post('/add', upload.any(), function(req, res, next) {
-		db.Prod_garment.create({
+		db.Goods.create({
+			ext_id: 123,
 	        title: req.body.title,
 	        articul: req.body.articul,
-	        madeIn: req.body.madeIn,
+	        made_in: req.body.madeIn,
 	        oldPrice: req.body.oldPrice,
 	        price: req.body.price,
 	        size: req.body.size,

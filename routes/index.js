@@ -5,7 +5,7 @@ var router = express.Router();
 module.exports = function(app, db) {
 	
 	router.get('/', function(req, res, next) {
-		db.Prod_garment.findAll()
+		db.Goods.findAll()
 		.then(product => {		
 			res.render('index', {product});
 		})
