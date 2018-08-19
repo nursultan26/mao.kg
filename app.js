@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-var db = require('./database/index')
+var db = require('./database/index');
 
 /* Configure routes */
 var routes = glob.sync('./routes/*.js');

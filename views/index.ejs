@@ -1,4 +1,4 @@
-        <%- include('./header.ejs', {path: '../'}); %>
+        <%- include('./header.ejs'); %>
         <!--end Header-->
         <!--start section.fade-slider-->
         <section id="parallax" class="fade_slider">
@@ -51,21 +51,21 @@
             <div class="container">
                 <div class="block__caption_main">
                     <h2 class="caption_main">Новинки</h2>
-                    <span class="number_product"><%= product.length %> товаров</span>
+                    <span class="number_product"><%= data.goods.length %> товаров</span>
                 </div>
                 <ul class="list__products row_flex">
                     <%
-                        for (var i = 0; i < product.length; i++) {
+                        for (var i = 0; i < data.goods.length; i++) {
                     %>
                     <li class="col-md-3 col-sm-4 col-xs-12 item">
                         <div class="wrapper_product">
-                            <a href="#" class="img_wrapper"><img src="./img/<%= product[i].img %>" alt="" value="<%= product[i].img %>"></a>
+                            <a href="#" class="img_wrapper"><img src="./img/<%= data.goods[i].img %>" alt="" value="<%= data.goods[i].img %>"></a>
                             <div class="box_description">
-                                <p class="name"><a href="#"><%= product[i].title %></a></p>
+                                <p class="name"><a href="#"><%= data.goods[i].title %></a></p>
                                 <div class="bottom_box">
-                                    <div class="box_price"><% if(product.oldPrice =! null) { %><span class="old_price"><%= product[i].oldPrice %></span><% } %><span class="price"><%= product[i].price %></span></div>
+                                    <div class="box_price"><% if(data.goods.oldPrice =! null) { %><span class="old_price"><%= data.goods[i].oldPrice %></span><% } %><span class="price"><%= data.goods[i].price %></span></div>
                                     <div class="box_basket">
-                                        <a href="/basket?product=<%= product[i].id %>" class="btn_basket">В корзину<i class="fas fa-cart-arrow-down"></i></a>
+                                        <a href="/basket?product=<%= data.goods[i].ext_id %>" class="btn_basket">В корзину<i class="fas fa-cart-arrow-down"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -91,21 +91,21 @@
             <div class="container">
                 <div class="block__caption_main">
                     <h2 class="caption_main">В тренде</h2>
-                    <span class="number_product"><%= product.length %>  товаров</span>
+                    <span class="number_product"><%= data.goods.length %>  товаров</span>
                 </div>
                 <ul class="list__products row_flex">
                     <%
-                        for (var i = 0; i < product.length; i++) {
+                        for (var i = 0; i < data.goods.length; i++) {
                     %>
                     <li class="col-md-3 col-sm-4 col-xs-12 item">
                         <div class="wrapper_product">
-                            <a href="#" class="img_wrapper"><img src="./img/<%= product[i].img %>" alt=""></a>
+                            <a href="#" class="img_wrapper"><img src="./img/<%= data.goods[i].img %>" alt=""></a>
                             <div class="box_description">
-                                <p class="name"><a href="#"><%= product[i].title %></a></p>
+                                <p class="name"><a href="#"><%= data.goods[i].title %></a></p>
                                 <div class="bottom_box">
-                                    <div class="box_price"><% if(product.oldPrice =! null) { %><span class="old_price"><%= product[i].oldPrice %></span><% } %><span class="price"><%= product[i].price %></span></div>
+                                    <div class="box_price"><% if(data.goods.oldPrice =! null) { %><span class="old_price"><%= data.goods[i].oldPrice %></span><% } %><span class="price"><%= data.goods[i].price %></span></div>
                                     <div class="box_basket">
-                                        <a href="/basket?product=<%= product[i].id %>" class="btn_basket">В корзину<i class="fas fa-cart-arrow-down"></i></a>
+                                        <a href="/basket?product=<%= data.goods[i].ext_id %>" class="btn_basket">В корзину<i class="fas fa-cart-arrow-down"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -120,8 +120,23 @@
         </section>
         <!--end section.main-->
         <!--start Footer-->
-        <%- include('./footer.ejs', {path: '../'}); %>
+        <%- include('./footer.ejs'); %>
         <script>
+            var good =  "sad"  
+
+
+            $.get("/get/all", function(data, status){
+                for(var elem of data.posts) {
+                    currentBook = good
+                    currentBook = currentBook.replace('%title%', elem.title)
+                    currentBook = currentBook.replace('%image%', elem.image)
+                    currentBook = currentBook.replace(/%link%/g, elem.id)
+                    
+
+                    $( "#shelfContent" ).append(currentBook)
+                }
+            });
+
             $(document).ready(function(){
                 $('.list-gallery').each(function() {
                     $(this).magnificPopup({

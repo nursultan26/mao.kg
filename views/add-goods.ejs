@@ -1,0 +1,76 @@
+<div class="block__caption_main">
+   <h2 class="caption_main_catalog">Футболки</h2>
+</div>
+
+<ul class="list__products columnStyle row_flex">
+   <form action="/goods/add" method="POST" enctype="multipart/form-data">
+    <div class="group">
+        Наименование товара
+        <p><input type="text" name="title" placeholder=""></p>
+    </div>
+    <div class="group">
+        Фирма
+        <p><input list="firm" name="firm" placeholder="asd">
+        <datalist id="firm">
+        <% for(var i = 0; i < data.firm.length; i++) 
+            { 
+        %>
+            <option><%= data.firm[i] %></option>
+        <% 
+            }
+        %>
+        </datalist></p>
+    </div>
+    <div class="group">
+        Страна производителя
+        <p><input list="made_in" name="made_in" placeholder="asd">
+        <datalist id="made_in">
+        <% for(var i = 0; i < data.country.length; i++) 
+            { 
+        %>
+            <option><%= data.country[i] %></option>
+        <% 
+            }
+        %>
+        </datalist></p>
+    </div>
+    <div class="group">
+        Размер
+        <p><input list="size" name="size" placeholder="asd">
+        <datalist id="size">
+        <% for(var i = 0; i < data.size.length; i++) 
+            { 
+        %>
+            <option><%= data.size[i] %></option>
+        <% 
+            }
+        %>
+        </datalist></p>
+    </div>
+    <div class="group">
+        Артикул
+        <p><input type="art" name="art" placeholder=""></p>
+    </div>
+    <div class="group">
+        Цена
+        <p><input type="number" name="price" placeholder=""></p>
+    </div>
+    <div class="group">
+        Количество
+        <p><input type="number" name="quan" placeholder=""></p>
+    </div>
+    <div class="group">
+        Цвет
+        <p><input type="text" name="color" placeholder=""></p>
+    </div>
+    <div class="group">
+        Картинка товара
+        <p><input type="file" name="img" accept="image/*"></p>
+    </div>
+    <div class="textCenter">
+        <div class="goup-btn">
+            <button type="submit" class="btn_main">Отправить</button>
+        </div>
+    </div>
+</form>     
+</ul>

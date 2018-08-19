@@ -1,3 +1,4 @@
+
 var express = require('express');
 var router = express.Router();
 var config = require('../config')
@@ -7,10 +8,32 @@ var multer = require('multer');
 var upload = multer({dest: './public/img'});
 
 
+
 /* GET home page. */
 module.exports = function(app, db) {
+
+	var data = {
+		path: "../../"
+	}
+	/*var cat1,
+			cat2,
+			cat3
+
+	db.Category_1.findAll({
+	}).then(cat => {
+		cat1 = cat
+	})
+	db.Category_2.findAll({
+	}).then(cat => {
+		cat2 = cat
+	})
+	db.Category_3.findAll({
+	}).then(cat => {
+		cat3 = cat
+	})*/
+
 	router.get('/all', function(req, res, next) {
-		res.render('catalog', {path: '../../'});
+		res.render('catalog', {data});
 	});	
 
 	router.get('/new', function(req, res, next) {
@@ -40,10 +63,10 @@ module.exports = function(app, db) {
 	        size: req.body.size,
 	        img: req.files[0].filename
 		})
-		res.render('product-add');
+		res.redirect('/');
 	});
 
 
 
-	app.use('/product', router)
+	app.use('/goods', router)
 };

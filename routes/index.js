@@ -3,21 +3,25 @@ var router = express.Router();
 
 /* GET home page. */
 module.exports = function(app, db) {
+	var data = {
+		path: "../"
+	}
 	
 	router.get('/', function(req, res, next) {
-		db.Goods.findAll()
-		.then(product => {		
-			res.render('index', {product});
+		db.Models.Good.findAll()
+		.then(goods => {		
+			data.goods = goods
+			res.render('index', {data});
 		})
 	});
 
 
 	router.get('/basket', function(req, res, next) {
-		res.render('basket');
+		res.render('basket', {data});
 	});
 
 	router.get('/delivery', function(req, res, next) {
-		res.render('page');
+		res.render('page',{data});
 	});
 
 

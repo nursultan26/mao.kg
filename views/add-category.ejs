@@ -1,0 +1,46 @@
+<form action="/goods/add" method="POST" enctype="multipart/form-data">
+    <div class="group">
+        Категория 1 уровня
+        <p><input type="text" list="cat1" name="cat1">
+        <datalist id="cat1">
+        <% for(var i = 0; i < data.cat1.length; i++) 
+            { 
+        %>
+            <option><%= data.cat1[i] %></option>
+        <% 
+            }
+        %>
+        </datalist></p>
+    </div>
+    <div class="group">
+        Категория 2 уровня
+        <p><input type="cat2" list="cat2" name="made_in">
+        <datalist id="cat2">
+        <% for(var i = 0; i < data.cat2.length; i++) 
+            { 
+        %>
+            <option><%= data.cat2[i] %></option>
+        <% 
+            }
+        %>
+        </datalist></p>
+    </div>
+    <div class="group">
+        Категория 3 уровня
+        <p><input type="cat3" list="cat3" name="size">
+        <datalist id="cat3">
+        <% for(var i = 0; i < data.cat3.length; i++) 
+            { 
+        %>
+            <option><%= data.cat3[i] %></option>
+        <% 
+            }
+        %>
+        </datalist></p>
+    </div>
+    <div class="textCenter">
+        <div class="goup-btn">
+            <button type="submit" class="btn_main">Отправить</button>
+        </div>
+    </div>
+</form>

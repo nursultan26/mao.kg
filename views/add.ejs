@@ -1,0 +1,110 @@
+<%- include('./header.ejs', {path: '../'}); %>
+<section style="height: 200px;"></section>
+
+<section class="main">
+    <div class="container">
+        <div class="row_flex">
+            <div class="col-md-3 col-sm-12 col-xs-12 site_bar">
+                <div class="wrapper_site_bar">
+                    <a href="#">Добавить категории</a>
+                    <hr>
+                    <div class="group">
+                        <label for="">Категория</label>
+                        <p><input list="firm" name="firm" placeholder="asd">
+                        <datalist id="firm">
+                        <% for(var i = 0; i < data.cat1.length; i++) { %>
+                            <option><%= data.cat1[i] %></option>
+                        <% } %>
+                        </datalist></p>
+                    </div>
+                    <div class="group">
+                        <label for="">Подкатегория</label>
+                        <p><input list="firm" name="firm" placeholder="asd">
+                        <datalist id="firm">
+                        <% for(var i = 0; i < data.cat2.length; i++) { %>
+                            <option><%= data.cat2[i] %></option>
+                        <% } %>
+                        </datalist></p>
+                    </div>
+                    <ul class="list__under_category">
+                        <% for(var i = 0; i < data.cat3.length; i++) { %>
+                            <li class="active"><a href="#"><%= data.cat3[i] %></a></li>
+                        <% } %>
+                    </ul>
+                
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-12 col-xs-12 main_content">
+                <div class="block__caption_main">
+                   <h2 class="caption_main_catalog">Футболки</h2>
+                </div>
+
+                <ul class="list__products columnStyle row_flex">
+                        asdasasdas
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<%- include('./footer.ejs', {path: '../'}); %>
+
+
+<script>
+    /*var hash = window.location.hash.substr(1);
+    var href = $('.wrapper_site_bar').each(function(){
+        var href = $(this).attr('href');
+        if(hash==href.substr(0,href.length-5)){
+            var toLoad = hash+'.html #content';
+            $('#content').load(toLoad)
+        } 
+    });
+    
+    $('#nav li a').click(function(){
+    
+    var toLoad = $(this).attr('href')+' #content';
+    $('#content').hide('fast',loadContent);
+    $('#load').remove();
+    $('#wrapper').append('<span id="load">LOADING...</span>');
+    $('#load').fadeIn('normal');
+    window.location.hash = $(this).attr('href').substr(0,$(this).attr('href').length-5);
+    function loadContent() {
+     $('#content').load(toLoad,'',showNewContent())
+    }
+    function showNewContent() {
+     $('#content').show('normal',hideLoader());
+    }
+    function hideLoader() {
+     $('#load').fadeOut('normal');
+    }
+    return false;
+    
+    });*/
+    $(document).ready(function() {
+        $('.wrapper_site_bar a').click(function(){
+            var toLoad = "/admin/add/good";
+            $('.main_content').hide('fast',loadContent);
+            function loadContent() {
+            $('.main_content').load(toLoad,'',showNewContent)
+            }
+            function showNewContent() {
+                $('.main_content').show('normal');
+            }
+            JavaScript
+
+            function hideLoader() {
+                $('.main_content').fadeOut('normal');
+            }
+
+            return false;
+        });
+
+        
+
+    });
+
+</script>
+</body>
+</html>
